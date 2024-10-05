@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class ControleDeliveryApplication {
 
-	public String getHomeTeste (){
+	public String getHomeTeste() {
 		return "Controle Delivery - API HOME";
 	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(ControleDeliveryApplication.class, args);
 	}
