@@ -1,15 +1,16 @@
 package br.com.delivery.controleDelivery.cliente.application.api;
 
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.web.bind.annotation.RestController;
+
 import br.com.delivery.controleDelivery.cliente.application.service.ClienteService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.stereotype.Controller;
 
-import java.util.List;
-import java.util.UUID;
-
-@Controller
+@RestController
 @Log4j2
 @RequiredArgsConstructor
 public class ClienteController implements ClienteApi {
@@ -33,10 +34,10 @@ public class ClienteController implements ClienteApi {
 
     @Override
     public ClienteDetalhadoResponse getClienteAtravesId(UUID idCliente) {
-        log.info("[start] ClienteController  - getClienteAtravesId ");
+        log.info("[start] ClienteController  - getClienteAtravesId");
         log.info("[idCliente] {} ", idCliente);
         ClienteDetalhadoResponse clienteDetalhado = clienteService.buscaClienteAtravesId(idCliente);
-        log.info("[finish] ClienteController  - getClienteAtravesId ");
+        log.info("[finish] ClienteController  - getClienteAtravesId");
         return clienteDetalhado;
     }
 

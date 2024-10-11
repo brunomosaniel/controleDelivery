@@ -3,11 +3,14 @@ package br.com.delivery.controleDelivery.cliente.application.api;
 import br.com.delivery.controleDelivery.cliente.domain.Cliente;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Value;
+
 import org.hibernate.validator.constraints.br.CPF;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Value
 public class ClienteDetalhadoResponse {
     private UUID idCliente;
     private String nomeCompleto;
@@ -25,7 +28,7 @@ public class ClienteDetalhadoResponse {
         this.celular =  cliente.getCelular();
         this.cpf =  cliente.getCpf();
         this.email =  cliente.getEmail();
-        this.dataHoraDoCadastro = LocalDateTime.now();
+        this.dataHoraDoCadastro = cliente.getDataHoraDoCadastro();
 
     }
 }

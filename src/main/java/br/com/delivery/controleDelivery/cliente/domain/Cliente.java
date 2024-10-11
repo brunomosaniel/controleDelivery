@@ -52,7 +52,8 @@ public class Cliente {
         this.nomeCompleto =  clienteAlteracaoRequest.getNomeCompleto();
         this.endereco = clienteAlteracaoRequest.getEndereco();
         this.celular = clienteAlteracaoRequest.getCelular();
-        this.cpf = clienteAlteracaoRequest.getCelular();
+        this.cpf = clienteAlteracaoRequest.getCpf();
+        this.email = clienteAlteracaoRequest.getEmail();
         this.getDataHoraDaUltimaAlteracao = LocalDateTime.now();
 
     }

@@ -16,7 +16,8 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(columnDefinition = "uuid", name = "idPedido", updatable = false, unique = true, nullable = false)
     private UUID idPedido;
-    private int quantidade;
+    @NotBlank
+    private String quantidade;
     @NotBlank
     private String descricao;
     @NotBlank
@@ -25,7 +26,7 @@ public class Pedido {
     private LocalDateTime dataHoraDoCadastro;
     private LocalDateTime getDataHoraDaUltimaAlteracao;
 
-    public Pedido(UUID idPedido, int quantidade, String descricao, String enderecoCliente, String metodoPagamento, LocalDateTime dataHoraDoCadastro, LocalDateTime getDataHoraDaUltimaAlteracao) {
+    public Pedido(UUID idPedido, String quantidade, String descricao, String enderecoCliente, String metodoPagamento, LocalDateTime dataHoraDoCadastro, LocalDateTime getDataHoraDaUltimaAlteracao) {
         this.idPedido = idPedido;
         this.quantidade = quantidade;
         this.descricao = descricao;

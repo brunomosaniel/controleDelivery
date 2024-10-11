@@ -16,7 +16,7 @@ import java.util.UUID;
 @Log4j2
 @RequiredArgsConstructor
 public class ClienteInfraRepository implements ClienteRepository {
-    private ClienteSpringDataJPARepository clienteSpringDataJPARepository;
+    private final ClienteSpringDataJPARepository clienteSpringDataJPARepository;
 
     @Override
     public Cliente salva(Cliente cliente) {
@@ -37,12 +37,12 @@ public class ClienteInfraRepository implements ClienteRepository {
     @Override
     public Cliente buscaClienteAtravesId(UUID idCliente) {
         log.info("[start] ClienteInfraRepository - buscaClienteAtravesId ");
-        Cliente cliente = (Cliente) clienteSpringDataJPARepository.findByIdCliente(idCliente)
+        Cliente cliente = (Cliente) clienteSpringDataJPARepository.findById(idCliente)
                 .orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Cliente não encontrado"));
         log.info("[finish] ClienteInfraRepository - buscaClienteAtravesId ");
         return cliente;
     }
-
+ 
     @Override
     public void deletaCliente(Cliente cliente) {
         log.info("[start] ClienteInfraRepository - deletaCliente");
