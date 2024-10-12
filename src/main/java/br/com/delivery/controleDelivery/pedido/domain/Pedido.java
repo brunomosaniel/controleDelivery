@@ -24,6 +24,7 @@ public class Pedido {
 	@Column(columnDefinition = "uuid", name = "idPedido", updatable = false, unique = true, nullable = false)
 	private UUID idPedido;
 	@NotNull
+	@Column(columnDefinition = "uuid", name = "idCliente", nullable = false)
 	private UUID idCliente;
 	@NotBlank
 	private String quantidade;
@@ -35,7 +36,7 @@ public class Pedido {
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime getDataHoraDaUltimaAlteracao;
 
-	public Pedido(UUID idCliente2, @Valid PedidoRequest pedidoRequest) {
+	public Pedido(UUID idCliente, @Valid PedidoRequest pedidoRequest) {
 		this.idCliente = idCliente;
 		this.quantidade = pedidoRequest.getQuantidade();
 		this.descricao = pedidoRequest.getDescricao();

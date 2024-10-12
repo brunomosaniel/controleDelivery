@@ -1,5 +1,6 @@
 package br.com.delivery.controleDelivery.pedido.application.api;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -22,5 +23,13 @@ public class PedidoController implements PedidoApi {
 		PedidoResponse pedido = pedidoService.criaPedido(idCliente, pedidoRequest);
 		log.info("[Finaliza]  PedidoController -  postPedido");
 		return pedido;
+	}
+
+	@Override
+	public List<PedidoClienteListResponse> getPedidoDoClienteComId(UUID idCliente) {
+		log.info("[start]  PedidoController -  getPedidoDoClienteComId");
+		log.info("[idCliente] {}", idCliente);
+		log.info("[finish]  PedidoController -  getPedidoDoClienteComId");
+		return null;
 	}
 }
