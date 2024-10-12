@@ -24,12 +24,12 @@ public class PedidoController implements PedidoApi {
 		log.info("[Finaliza]  PedidoController -  postPedido");
 		return pedido;
 	}
-
 	@Override
 	public List<PedidoClienteListResponse> getPedidoDoClienteComId(UUID idCliente) {
 		log.info("[start]  PedidoController -  getPedidoDoClienteComId");
 		log.info("[idCliente] {}", idCliente);
+		List<PedidoClienteListResponse> pedidosDoCliente = pedidoService.buscaPedidosDoClienteComID(idCliente);
 		log.info("[finish]  PedidoController -  getPedidoDoClienteComId");
-		return null;
+		return pedidosDoCliente;
 	}
 }

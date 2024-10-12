@@ -21,7 +21,6 @@ public interface PedidoApi {
     @ResponseStatus(code = HttpStatus.CREATED)
     PedidoResponse postPedido(@PathVariable UUID idCliente,
                               @Valid @RequestBody PedidoRequest pedidoRequest);
-    
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
      List<PedidoClienteListResponse> getPedidoDoClienteComId(@PathVariable UUID idCliente);

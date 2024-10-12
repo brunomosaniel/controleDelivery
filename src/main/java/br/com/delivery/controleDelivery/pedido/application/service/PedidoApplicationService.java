@@ -1,10 +1,12 @@
 package br.com.delivery.controleDelivery.pedido.application.service;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
 import br.com.delivery.controleDelivery.cliente.application.service.ClienteService;
+import br.com.delivery.controleDelivery.pedido.application.api.PedidoClienteListResponse;
 import br.com.delivery.controleDelivery.pedido.application.api.PedidoRequest;
 import br.com.delivery.controleDelivery.pedido.application.api.PedidoResponse;
 import br.com.delivery.controleDelivery.pedido.domain.Pedido;
@@ -25,6 +27,13 @@ public class PedidoApplicationService implements PedidoService {
 		Pedido pedido = pedidoRepository.salvaPedido(new Pedido(idCliente, pedidoRequest));
 		log.info("[finish] PedidoApplicationService - criaPedido");
 		return new PedidoResponse(pedido.getIdPedido());
+	}
+	@Override
+	public List<PedidoClienteListResponse> buscaPedidosDoClienteComID(UUID idCliente) {
+		log.info("[start] PedidoApplicationService - buscaPedidosDoClienteComID");
+		clienteService.buscaClienteAtravesId(idCliente);
+		log.info("[finish] PedidoApplicationService - buscaPedidosDoClienteComID");
+		return null;
 	}
 
 }
