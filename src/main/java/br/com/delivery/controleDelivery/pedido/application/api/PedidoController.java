@@ -32,4 +32,11 @@ public class PedidoController implements PedidoApi {
 		log.info("[finish]  PedidoController -  getPedidoDoClienteComId");
 		return pedidosDoCliente;
 	}
+	@Override
+	public PedidoClienteDetalhadeResponse getPedidoDoClienteComId(UUID idCliente, UUID idPedido) {
+		log.info("[start]  PedidoController -  getPedidoDoClienteComId");
+		log.info("[idCliente] {} - [idPedido] {}", idCliente, idPedido);
+		log.info("[finish]  PedidoController -  getPedidoDoClienteComId");
+		return null;
+	}
 }

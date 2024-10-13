@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.delivery.controleDelivery.cliente.application.api.ClienteDetalhadoResponse;
 import jakarta.validation.Valid;
 
 @RestController
@@ -24,4 +25,9 @@ public interface PedidoApi {
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
      List<PedidoClienteListResponse> getPedidoDoClienteComId(@PathVariable UUID idCliente);
+    
+    @GetMapping(value = "/{idPedido}")
+    @ResponseStatus(code = HttpStatus.OK)
+    PedidoClienteDetalhadeResponse getPedidoDoClienteComId(@PathVariable UUID idCliente, @PathVariable UUID idPedido);
+
 }

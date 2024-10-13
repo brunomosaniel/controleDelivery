@@ -33,6 +33,7 @@ public class Pedido {
 	@NotBlank
 	private String metodoPagamento;
 
+	
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDateTime getDataHoraDaUltimaAlteracao;
 
