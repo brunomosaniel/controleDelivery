@@ -46,7 +46,6 @@ public class PedidoController implements PedidoApi {
 		log.info("[idCliente] {} - [idPedido] {}", idCliente, idPedido);
 		pedidoService.deletaPedidoDoClienteComID(idCliente, idPedido);
 		log.info("[finish]  PedidoController -  deletePedidDoClienteComId");
-		
 	}
 	@Override
 	public void patchPedido(UUID idCliente, UUID idPedido,
