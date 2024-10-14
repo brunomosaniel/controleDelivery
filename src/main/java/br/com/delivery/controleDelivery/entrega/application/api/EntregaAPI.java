@@ -28,6 +28,8 @@ public interface EntregaAPI {
 	@GetMapping
     @ResponseStatus(code = HttpStatus.OK)
      List<EntregaPedidoListResponse> getEntregaDoPedidoComId(@PathVariable UUID idPedido);
+	
+	
     
 
 }

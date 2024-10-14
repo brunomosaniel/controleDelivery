@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import br.com.delivery.controleDelivery.entrega.domain.Entrega;
 
 public interface EntregaSpringDataJPARepository extends JpaRepository<Entrega, UUID> {
-	List<Entrega> findByIdPedidos(UUID idPedido);
+
+	List<Entrega> findByIdPedido(UUID idPedido);
 
 }
