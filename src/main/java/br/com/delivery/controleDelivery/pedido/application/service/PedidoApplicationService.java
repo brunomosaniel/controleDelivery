@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import br.com.delivery.controleDelivery.cliente.application.service.ClienteService;
+import br.com.delivery.controleDelivery.pedido.application.api.PedidoAlteracaoRequest;
 import br.com.delivery.controleDelivery.pedido.application.api.PedidoClienteDetalhadeResponse;
 import br.com.delivery.controleDelivery.pedido.application.api.PedidoClienteListResponse;
 import br.com.delivery.controleDelivery.pedido.application.api.PedidoRequest;
@@ -47,9 +48,23 @@ public class PedidoApplicationService implements PedidoService {
 	}
 	@Override
 	public void deletaPedidoDoClienteComID(UUID idCliente, UUID idPedido) {
-		// TODO Auto-generated method stub
 		log.info("[start] PedidoApplicationService - deletaPedidoDoClienteComID");
+		clienteService.buscaClienteAtravesId(idCliente);
+		Pedido pedido = pedidoRepository.buscaPedidoPeloId(idPedido);
+		pedidoRepository.deletaPedido(pedido);
 		log.info("[finish] PedidoApplicationService - deletaPedidoDoClienteComID");
+		
+	}
+	@Override
+	public void alteraPedidoDoClienteComID(UUID idCliente, UUID idPedido,
+			PedidoAlteracaoRequest pedidoAlteracaoRequest) {
+		log.info("[start] PedidoApplicationService - alteraPedidoDoClienteComID");
+		clienteService.buscaClienteAtravesId(idCliente);
+		Pedido pedido = pedidoRepository.buscaPedidoPeloId(idPedido);
+		pedido.altera(pedidoAlteracaoRequest);
+		pedidoRepository.salvaPedido(pedido);
+		log.info("[finaliza] PedidoApplicationService - alteraPedidoDoClienteComID");
+		
 		
 	}
 
