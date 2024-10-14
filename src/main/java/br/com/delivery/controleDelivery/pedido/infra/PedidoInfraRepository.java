@@ -3,8 +3,10 @@ package br.com.delivery.controleDelivery.pedido.infra;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
+import br.com.delivery.controleDelivery.cliente.handler.APIException;
 import br.com.delivery.controleDelivery.pedido.application.service.PedidoRepository;
 import br.com.delivery.controleDelivery.pedido.domain.Pedido;
 import lombok.RequiredArgsConstructor;
@@ -28,5 +30,13 @@ public class PedidoInfraRepository implements PedidoRepository {
 		var pedidos = pedidoSpringDataJPARepository.findByIdCliente(idCliente);
 		log.info("[finish] PedidoInfraRepository - buscaPedidosDoClienteComID");		
 		return pedidos;
+	}
+	@Override
+	public Pedido buscaPedidoPeloId(UUID idPedido) {
+		log.info("[start] PedidoInfraRepository - buscaPedidoPeloId");	
+		var pedido = pedidoSpringDataJPARepository.findById(idPedido)
+				.orElseThrow(() -> APIException.build(HttpStatus.NOT_FOUND, "Pedido não encontrado para idPedido = " + idPedido));
+		log.info("[finish] PedidoInfraRepository - buscaPedidoPeloId");	
+		return pedido;
 	}
 }

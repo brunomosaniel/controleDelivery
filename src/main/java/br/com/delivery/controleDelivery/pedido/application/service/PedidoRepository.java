@@ -8,5 +8,6 @@ import br.com.delivery.controleDelivery.pedido.domain.Pedido;
 public interface PedidoRepository {
 	Pedido salvaPedido(Pedido pedido);
 	List<Pedido> buscaPedidosDoClienteComID(UUID idCliente);
+	Pedido buscaPedidoPeloId(UUID idPedido);
 
 }
