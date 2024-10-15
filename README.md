@@ -24,6 +24,10 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
    ```bash
    git clone https://github.com/brunomosaniel/controleDelivery.git
    cd controleDelivey
+2. Configure o banco de dados em application.yml.
+3. Compile o projeto: mvn install
+4. Execute a aplicação: mvn spring-boot:run
+
 
 
   
