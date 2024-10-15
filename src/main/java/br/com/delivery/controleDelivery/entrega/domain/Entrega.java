@@ -3,6 +3,7 @@ package br.com.delivery.controleDelivery.entrega.domain;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import br.com.delivery.controleDelivery.entrega.application.api.EntregaAlterecaoRequest;
 import br.com.delivery.controleDelivery.entrega.application.api.EntregaRequest;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -48,8 +49,15 @@ public class Entrega {
 		this.dataHoraDoCadastro = LocalDateTime.now();
 
 	}
-	
-	
+
+
+	public void altera(@Valid EntregaAlterecaoRequest entregaRequest) {
+		this.pontoRefencia = entregaRequest.getPontoRefencia();
+		this.enderecoEntrega = entregaRequest.getEnderecoEntrega();
+		this.numeroCasa = entregaRequest.getNumeroCasa();
+		this.getDataHoraDaUltimaAlteracao = LocalDateTime.now();
+		
+	}	
 
 
 }

@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import br.com.delivery.controleDelivery.entrega.application.api.EntregaAlterecaoRequest;
 import br.com.delivery.controleDelivery.entrega.application.api.EntregaPedidoDetalhadeResponse;
 import br.com.delivery.controleDelivery.entrega.application.api.EntregaPedidoListResponse;
 import br.com.delivery.controleDelivery.entrega.application.api.EntregaRequest;
@@ -50,6 +51,17 @@ public class EntregaApplicationService implements EntregaService {
 		Entrega entrega = entregaRepository.buscaEntregaPeloId(idEntrega);
 		entregaRepository.deletaEntrega(entrega);
 		log.info("[finish] EntregaApplicationService -  deletaEntregaDoPedidoComId"); 
+		
+	}
+
+	@Override
+	public void alteraEntregaDoPedidoComId(UUID idPedido, UUID idEntrega,
+			@Valid EntregaAlterecaoRequest entregaAlteracaoRequest) {
+		log.info("[start] EntregaApplicationService -  alteraEntregaDoPedidoComId"); 
+		Entrega entrega = entregaRepository.buscaEntregaPeloId(idEntrega);
+		entrega.altera(entregaAlteracaoRequest);
+		entregaRepository.salvaEntrega(entrega);
+		log.info("[finish] EntregaApplicationService -  alteraEntregaDoPedidoComId"); 
 		
 	}
 
