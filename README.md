@@ -1,5 +1,5 @@
 # Controle Delivery
-Este projeto foi desenvolvido para fazer um controle de Delivery de Restaurante.
+Este projeto foi desenvolvido para fazer o controle de um Delivery de Restaurante.
 
 ## Índice
 
