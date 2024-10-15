@@ -8,5 +8,8 @@ import br.com.delivery.controleDelivery.entrega.domain.Entrega;
 public interface EntregaRepository {
 	Entrega salvaEntrega(Entrega entrega);
 	List<Entrega> buscaEntregasDoPedidoComID(UUID idPedido);
+	Entrega buscaEntregaPeloId(UUID idEntrega);
+	void deletaEntrega(Entrega entrega);
+
 
 }
