@@ -10,7 +10,7 @@ Este projeto foi desenvolvido para fazer um controle de Delivery de Restaurante.
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-ava 11 ou superior
+- Java 11 ou superior
 - Spring Boot
 - Spring Data JPA
 - Banco de dados ( H2)
