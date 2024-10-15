@@ -1,5 +1,5 @@
 # Controle Delivery
-Este projeto foi desenvolvido para fazer o controle de um Delivery de Restaurante.
+Este projeto foi desenvolvido com o objetivo de gerenciar e controlar as operações de um serviço de delivery para restaurante.
 
 ## Índice
 
