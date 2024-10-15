@@ -5,9 +5,6 @@ Este projeto foi desenvolvido para fazer um controle de Delivery de Restaurante.
 
 - [Tecnologias](#tecnologias)
 - [Instalação](#instalação)
-- [Uso](#uso)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
 
   ## Tecnologias
 
