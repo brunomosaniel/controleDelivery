@@ -9,7 +9,6 @@ Este projeto foi desenvolvido com o objetivo de gerenciar e controlar as operaç
 - [Uso](#uso)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Contribuição](#contribuição)
-- [Licença](#licença)
 
   ## Tecnologias
 
