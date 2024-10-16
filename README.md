@@ -7,6 +7,9 @@ Este projeto foi desenvolvido com o objetivo de gerenciar e controlar as operaç
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Uso](#uso)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
   ## Tecnologias
 
@@ -89,4 +92,28 @@ curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/47b284ae-b3a8-
 
  altera o Entrega
 curl -X PATCH http:localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-45cc-a80e-993efdd0ce58/entrega/f066c914-69dc-45dc-b253-62ce64d3ea0c
+
+
+ ## Estrutura do Projeto
+
+src/
+├── main/
+│   ├── java/
+│   │   └── seu/pacote/
+│   │       ├── controller/
+│   │       ├── service/
+│   │       └── repository/
+│   └── resources/
+│       ├── application.properties
+│       └── static/
+└── test/
+
+## Contribuição
+
+ Se você quiser contribuir, siga estas etapas:
+1. Fork o projeto.
+2. Crie uma nova branch (git checkout -b minha-feature).
+3. Faça suas alterações e commit (git commit -m 'Adiciona nova feature').
+4. Push a branch (git push origin minha-feature).
+5. Crie um novo Pull Request.
  
