@@ -29,7 +29,7 @@ public class Entrega {
 	private UUID idPedido;
 	@NotBlank
 	private String nomeCliente;
-	private String pontoRefencia;
+	private String pontoReferencia;
 	@NotBlank
 	private String enderecoEntrega;
 	@NotBlank
@@ -43,7 +43,7 @@ public class Entrega {
 	public Entrega(UUID idPedido, @Valid EntregaRequest entregaRequest) {
 		this.idPedido = idPedido;
 		this.nomeCliente = entregaRequest.getNomeCliente();
-		this.pontoRefencia = entregaRequest.getPontoRefencia();
+		this.pontoReferencia = entregaRequest.getPontoReferencia();
 		this.enderecoEntrega = entregaRequest.getEnderecoEntrega();
 		this.numeroCasa = entregaRequest.getNumeroCasa();
 		this.dataHoraDoCadastro = LocalDateTime.now();
@@ -52,7 +52,7 @@ public class Entrega {
 
 
 	public void altera(@Valid EntregaAlterecaoRequest entregaRequest) {
-		this.pontoRefencia = entregaRequest.getPontoRefencia();
+		this.pontoReferencia = entregaRequest.getPontoReferencia();
 		this.enderecoEntrega = entregaRequest.getEnderecoEntrega();
 		this.numeroCasa = entregaRequest.getNumeroCasa();
 		this.getDataHoraDaUltimaAlteracao = LocalDateTime.now();

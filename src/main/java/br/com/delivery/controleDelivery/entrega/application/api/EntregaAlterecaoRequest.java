@@ -5,7 +5,7 @@ import lombok.Value;
 
 @Value
 public class EntregaAlterecaoRequest {
-	private String pontoRefencia;
+	private String pontoReferencia;
 	@NotBlank
 	private String enderecoEntrega;
 	@NotBlank

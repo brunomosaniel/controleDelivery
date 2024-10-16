@@ -11,7 +11,7 @@ import lombok.Value;
 public class EntregaPedidoListResponse {
 	private UUID idEntrega;
 	private String nomeCliente;
-	private String pontoRefencia;
+	private String pontoReferencia;
 	private String enderecoEntrega;
 	private String numeroCasa;
 	
@@ -24,7 +24,7 @@ public class EntregaPedidoListResponse {
 	public EntregaPedidoListResponse(Entrega entrega) {
 		this.idEntrega = entrega.getIdEntrega();
 		this.nomeCliente = entrega.getNomeCliente();
-		this.pontoRefencia = entrega.getPontoRefencia();
+		this.pontoReferencia = entrega.getPontoReferencia();
 		this.enderecoEntrega = entrega.getEnderecoEntrega();
 		this.numeroCasa = entrega.getNumeroCasa();
 	}
