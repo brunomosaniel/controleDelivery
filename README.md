@@ -95,7 +95,7 @@ curl -X PATCH http:localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-4
 
 
  ## Estrutura do Projeto
-
+```
 src/
 ├── main/
 │   ├── java/
