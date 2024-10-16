@@ -46,50 +46,50 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
  curl -X POST http:localhost:8080/controledelivery/api/v1/cliente
  
  lista todos os Clientes (GET)
- curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/
+ curl -X GET http:localhost:8080/controledelivery/api/v1/cliente
 
  busca por usuário (GET)
-curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/idCliente
+curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/{idCliente}
 
  deleta o cliente
- curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/IdCliente
+ curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/{idCliente}
 
  altera o Cliente
-curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/Idcliente
+curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/{idCliente}
 ```
 ### API Pedido
  ```
  criar um novo Pedido (POST)
- curl -X POST http:localhost:8080/controledelivery/api/v1/cliente/idCliente/pedido
+ curl -X POST http:localhost:8080/controledelivery/api/v1/cliente/{idCliente}/pedido
 
  lista todos os Pedidos (GET)
- curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/idCliente/pedido
+ curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/{idCliente}/pedido
 
  busca por Pedido (GET)
- curl -X GET http:localhost:localhost:8080/controledelivery/api/v1/cliente/idCliente/pedido/idPedido
+ curl -X GET http:localhost:localhost:8080/controledelivery/api/v1/cliente/{idCliente}/pedido/{idPedido}
 
 deleta o Pedido
- curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/idCliente/pedido/idPedido
+ curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/{idCliente}/pedido/{idPedido}
 
 altera o Pedido
-curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/idCliente/pedido/idPedido
+curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/{idCliente}/pedido/{idPedido}
 ```
 ### API Entrega
 ```
  criar uma Entrega (POST)
- curl -X POST http:localhost:8080/controledelivery/api/v1/pedido/idPedido/entrega
+ curl -X POST http:localhost:8080/controledelivery/api/v1/pedido/{idPedido}/entrega
 
  lista todos os Entregas (GET)
-  curl -X GET http:localhost:8080/controledelivery/api/v1/pedido/idPedido/entrega
+  curl -X GET http:localhost:8080/controledelivery/api/v1/pedido/{idPedido}/entrega
 
  busca por Entrega (GET)
- curl -X GET http:localhost:8080/controledelivery/api/v1/pedido/idPedido/entrega/idEntrega
+ curl -X GET http:localhost:8080/controledelivery/api/v1/pedido/{idPedido}/entrega/{idEntrega}
 
 deleta o Entrega
- curl -X DEL http:localhost:8080/controledelivery/api/v1/pedido/idPedido/entrega/idEntrega
+ curl -X DEL http:localhost:8080/controledelivery/api/v1/pedido/{idPedido}/entrega/{idEntrega}
 
 altera o Entrega
-curl -X PATCH http:localhost:8080/controledelivery/api/v1/pedido/idPedido/entrega/idEntrega
+curl -X PATCH http:localhost:8080/controledelivery/api/v1/pedido/{idPedido}/entrega/{idEntrega}
 ```
 
 ## Contribuição
