@@ -39,12 +39,20 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 4. Execute a aplicação: mvn spring-boot:run
 
 ## Uso
-Como Criar Cliente, Pedido e Entrega:
-```bash
-curl -X POST localhost:8080/controledelivery/api/v1/cliente
+  API Cliente
+ criar um novo cliente (POST)
+ curl -X POST http:localhost:8080/controledelivery/api/v1/cliente
+ 
+ lista todos os Clientes (GET)
+ curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4ca4-8b53-66a5ea5d71be
 
-curl -X POST localhost:8080/controledelivery/api/v1/cliente/7ed44276-a1f0-413d-9ee0-3ac3b12f10a6/pedido
+ busca por usuário (GET)
+curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4ca4-8b53-66a5ea5d71be
 
-curl -X localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-45cc-a80e-993efdd0ce58/entrega
+ deleta o cliente
+ curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/55fa3802-b334-434f-9399-98f1aeddf8c6
 
-  
+ altera o Cliente
+curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4ca4-8b53-66a5ea5d71be
+ 
+ 
