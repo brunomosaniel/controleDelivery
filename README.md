@@ -54,7 +54,7 @@ curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4c
  curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/55fa3802-b334-434f-9399-98f1aeddf8c6
 
  altera o Cliente
-curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4ca4-8b53-66a5ea5d71be
+curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4ca4-8b53-66a5ea5d71be
 
 ### API Pedido
  
@@ -67,8 +67,26 @@ curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4c
  busca por Pedido (GET)
  curl -X GET http:localhost:localhost:8080/controledelivery/api/v1/cliente/e0085fe7-51bf-4c38-a391-57ba9b96b88b/pedido/61d76438-e9e3-4663-ad40-4f80940224f6
 
-  deleta o cliente
+  deleta o Pedido
  curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/244dfd49-cbfd-4a25-abf0-9fa6158ce4ea/pedido/51d12356-f6fc-46c0-bc24-c9bd404a3f76
 
- altera o Cliente
-curl -X DEL http:localhost:8080/controledelivery/api/v1/cliente/47b284ae-b3a8-42d1-bd24-edb9900aeb2f/pedido/16c5b0ef-e584-484c-8ffb-ba3e7c8464b0
+ altera o Pedido
+curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/47b284ae-b3a8-42d1-bd24-edb9900aeb2f/pedido/16c5b0ef-e584-484c-8ffb-ba3e7c8464b0
+
+### API Entrega
+
+ criar uma Entrega (POST)
+ curl -X POST http:localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-45cc-a80e-993efdd0ce58/entrega
+
+ lista todos os Entregas (GET)
+  curl -X GET http:localhost:8080/controledelivery/api/v1/pedido/00f100a9-74ab-44b6-98eb-bdbb3b9cbe79/entrega
+
+ busca por Entrega (GET)
+ curl -X GET http:localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-45cc-a80e-993efdd0ce58/entrega/f066c914-69dc-45dc-b253-62ce64d3ea0c
+
+  deleta o Entrega
+ curl -X DEL http:localhost:8080/controledelivery/api/v1/pedido/f72d24eb-1d5d-4dbc-b889-0b51980679d9/entrega/62ca6ae9-d0fe-4fab-a75d-3bf300f46fd9
+
+ altera o Entrega
+curl -X PATCH http:localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-45cc-a80e-993efdd0ce58/entrega/f066c914-69dc-45dc-b253-62ce64d3ea0c
+ 
