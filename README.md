@@ -40,6 +40,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
 ## Uso
   API Cliente
+   ```bash
  criar um novo cliente (POST)
  curl -X POST http:localhost:8080/controledelivery/api/v1/cliente
  
