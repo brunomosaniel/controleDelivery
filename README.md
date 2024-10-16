@@ -40,7 +40,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
 ## Uso
 Como Criar Cliente, Pedido e Entrega:
-bash
+```bash
 POST localhost:8080/controledelivery/api/v1/cliente
 
   
