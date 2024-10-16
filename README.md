@@ -42,8 +42,9 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 4. Execute a aplicação: mvn spring-boot:run
 
 ## Uso
-  ### API Cliente
   
+  ### API Cliente
+  ```
  criar um novo cliente (POST)
  curl -X POST http:localhost:8080/controledelivery/api/v1/cliente
  
@@ -58,9 +59,9 @@ curl -X GET http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4c
 
  altera o Cliente
 curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-4ca4-8b53-66a5ea5d71be
-
+```
 ### API Pedido
- 
+ ```
  criar um novo Pedido (POST)
  curl -X POST http:localhost:8080/controledelivery/api/v1/cliente/7ed44276-a1f0-413d-9ee0-3ac3b12f10a6/pedido
 
@@ -75,9 +76,9 @@ curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/c0a76784-a582-
 
  altera o Pedido
 curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/47b284ae-b3a8-42d1-bd24-edb9900aeb2f/pedido/16c5b0ef-e584-484c-8ffb-ba3e7c8464b0
-
+```
 ### API Entrega
-
+```
  criar uma Entrega (POST)
  curl -X POST http:localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-45cc-a80e-993efdd0ce58/entrega
 
@@ -92,7 +93,7 @@ curl -X PATCH http:localhost:8080/controledelivery/api/v1/cliente/47b284ae-b3a8-
 
  altera o Entrega
 curl -X PATCH http:localhost:8080/controledelivery/api/v1/pedido/d76c0b5f-3066-45cc-a80e-993efdd0ce58/entrega/f066c914-69dc-45dc-b253-62ce64d3ea0c
-
+```
 
  ## Estrutura do Projeto
 ```
@@ -107,7 +108,7 @@ src/
 │       ├── application.properties
 │       └── static/
 └── test/
-
+```
 ## Contribuição
 
  Se você quiser contribuir, siga estas etapas:
